@@ -7,19 +7,19 @@
             </div>
             <div class="col-sm-6 col-md-3 col-lg-3" *ngFor="let sach of hot_books">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 item_sp_noi_bat">
-                    <a href="chi_tiet_sach.php?id_sach={{sach.id}}">
+                    <a href="chi_tiet_sach.php?id_sach={{book.id}}">
                         <div class="hinh_sach">
-                            <img src="images/sach/{{sach.hinh}}">
+                            <img src="images/sach/{{book.hinh}}">
                         </div>
                     </a>
                     <div class="thong_tin_tom_tat_sach">
-                        <a href="chi_tiet_sach.php?id_sach={{sach.id}}">
-                            <div class="ten_sach">{{sach.ten_sach}}</div>
-                            <div class="tac_gia">{{sach.id_tac_gia}}</div>
-                            <div class="don_gia_ban">{{(sach.don_gia) ? (sach.don_gia | currency:'USD':true:'1.0') + ' đ ' : ''}}</div>
-                            <div class="don_gia_bia">{{(sach.gia_bia) ? (sach.gia_bia | currency:'USD':true:'1.0') + ' đ ' : ''}}</div>
+                        <a href="chi_tiet_sach.php?id_sach={{book.id}}">
+                            <div class="ten_sach">{{book.ten_sach}}</div>
+                            <div class="tac_gia">{{book.id_tac_gia}}</div>
+                            <div class="don_gia_ban">{{(book.don_gia) ? (book.don_gia | currency:'USD':true:'1.0') + ' đ ' : ''}}</div>
+                            <div class="don_gia_bia">{{(book.gia_bia) ? (book.gia_bia | currency:'USD':true:'1.0') + ' đ ' : ''}}</div>
                         </a>
-                        <a href="them_vao_gio_hang.php?id_sach={{sach.id}}">
+                        <a href="them_vao_gio_hang.php?id_sach={{book.id}}">
                             <div class="btn_mua_ngay">Mua Ngay</div>
                         </a>
                     </div>
