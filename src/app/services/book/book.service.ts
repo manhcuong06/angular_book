@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Book } from '../../models/book/book.model';
 import params_local = require('../../params/params_local');
 import params = require('../../params/params');
 
@@ -7,20 +8,16 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class BookService {
-    api_path: string = 'http://172.23.34.100:81/service_api/api_service_sach.php?task=';
+    api_path    = `${params_local.service_api_domain}book/`;
     images_path = `${params_local.service_api_domain}images/sach/`;
+    all_books: Book[];
 
     constructor(private http: Http) { }
 
-    getNewBooks(): Promise<any[]> {
-        return this.http.get(this.api_path + 'sach_moi')
+    getAllBooks(): Promise<Book[]> {
+        return this.http.get(`${this.api_path}all`)
             .toPromise()
-            .then((res: Response) => res.json());
-    }
-
-    getHotBooks(): Promise<any[]> {
-        return this.http.get(this.api_path + 'sach_noi_bat')
-            .toPromise()
-            .then((res: Response) => res.json());
+            .then((res: Response) => this.all_books = res.json())
+        ;
     }
 }

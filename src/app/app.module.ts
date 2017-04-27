@@ -9,7 +9,7 @@ import { ModHeaderComponent }  from './widgets/header/header.component';
 import { ModFooterComponent }  from './widgets/footer/footer.component';
 
 //Home modules
-import { ModSlideBannerComponent }  from './modules/slide_banner/slide_banner.component';
+import { ModBannerComponent }  from './modules/banner/banner.component';
 import { ModNewBookComponent }  from './modules/new_book/new_book.component';
 import { ModHotBookComponent }  from './modules/hot_book/hot_book.component';
 
@@ -17,6 +17,7 @@ import { ModHotBookComponent }  from './modules/hot_book/hot_book.component';
 import { PageHomeComponent }  from './pages/home/home.component';
 
 //Services
+import { BannerService } from './services/banner/banner.service';
 import { BookService } from './services/book/book.service';
 
 @NgModule({
@@ -28,12 +29,12 @@ import { BookService } from './services/book/book.service';
     ModHeaderComponent, ModFooterComponent,
 
     //Home modules
-    ModSlideBannerComponent, ModNewBookComponent, ModHotBookComponent,
+    ModBannerComponent, ModNewBookComponent, ModHotBookComponent,
 
     //Pages
     PageHomeComponent,
   ],
-  providers: [ BookService ],
+  providers: [ BannerService, BookService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

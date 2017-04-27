@@ -11,8 +11,9 @@ export class ModNewBookComponent implements OnInit {
     new_books: Book[];
 
     constructor(private book_service: BookService) {
-        // this.book_service.getNewBooks()
-        //     .then(books => this.new_books = books);
+        setTimeout(() => {
+            this.new_books = this.book_service.all_books;
+        }, 500);
     }
 
     ngOnInit() { }

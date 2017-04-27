@@ -11,8 +11,9 @@ export class ModHotBookComponent implements OnInit {
     hot_books: Book[];
 
     constructor(private book_service: BookService) {
-        // this.book_service.getHotBooks()
-        //     .then(books => this.hot_books = books);
+        setTimeout(() => {
+            this.hot_books = this.book_service.all_books.filter(book => book.noi_bat == 1);
+        }, 500);
     }
 
     ngOnInit() { }
