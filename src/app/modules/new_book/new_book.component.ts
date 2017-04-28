@@ -12,7 +12,7 @@ export class ModNewBookComponent implements OnInit {
 
     constructor(private book_service: BookService) {
         setTimeout(() => {
-            this.new_books = this.book_service.all_books;
+            this.new_books = this.book_service.all_books.slice(0, 8);
         }, 500);
     }
 
