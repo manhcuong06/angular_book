@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 declare var $: any;
 
 @Component({
-    selector: 'module-header',
-    templateUrl: '/app/widgets/header/header.component.html'
+    selector: 'module-menu',
+    templateUrl: '/app/widgets/menu/menu.component.html'
 })
-export class ModHeaderComponent implements OnInit {
+export class ModMenuComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {

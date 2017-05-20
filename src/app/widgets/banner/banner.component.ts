@@ -5,7 +5,7 @@ import { Banner } from '../../models/banner/banner.model';
 
 @Component({
     selector: 'module-banner',
-    templateUrl: '/app/modules/banner/banner.component.html'
+    templateUrl: '/app/widgets/banner/banner.component.html'
 })
 export class ModBannerComponent implements OnInit {
     banners: Banner[];

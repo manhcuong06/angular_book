@@ -5,11 +5,11 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { AppComponent }  from './app.component';
 
 //Widgets
-import { ModHeaderComponent }  from './widgets/header/header.component';
+import { ModBannerComponent }  from './widgets/banner/banner.component';
+import { ModMenuComponent }  from './widgets/menu/menu.component';
 import { ModFooterComponent }  from './widgets/footer/footer.component';
 
 //Home modules
-import { ModBannerComponent }  from './modules/banner/banner.component';
 import { ModNewBookComponent }  from './modules/new_book/new_book.component';
 import { ModHotBookComponent }  from './modules/hot_book/hot_book.component';
 
@@ -26,10 +26,10 @@ import { BookService } from './services/book/book.service';
     AppComponent,
 
     //Widgets
-    ModHeaderComponent, ModFooterComponent,
+    ModBannerComponent, ModMenuComponent, ModFooterComponent,
 
     //Home modules
-    ModBannerComponent, ModNewBookComponent, ModHotBookComponent,
+    ModNewBookComponent, ModHotBookComponent,
 
     //Pages
     PageHomeComponent,
